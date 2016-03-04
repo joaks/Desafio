@@ -15,10 +15,13 @@ alReves = b.reverse
 
 array=[a,alReves,c]
 
-array.each do |x|
-
-	pp "#{x[0]} "
-	pp "#{x[1]} "
-	pp "#{x[2]} "
-	
+i=0
+while i < array.length
+	array.each do |x|
+		print "#{x[i]} "
+	end
+	print "\n"
+	i +=1
 end
+
+
