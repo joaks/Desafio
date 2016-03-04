@@ -4,14 +4,13 @@ b = [:azul, :rojo, :amarillo]
 c = ["Tacos", "Quesadillas", "Hamburguesas"]
 
 array=[a,b,c]
-
-array.each do |x|
-
-	print "#{x[0]} "
-	print "#{x[1]} "
-	print "#{x[2]} "
-	
+i=0
+while i < array.length
+	array.each do |x|
+		print "#{x[i]} "
+	end
+	print "\n"
+	i +=1
 end
-
 
 
