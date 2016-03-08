@@ -3,8 +3,9 @@ a = [1,2,3]
 b = [:azul, :rojo, :amarillo]
 c = ["Tacos", "Quesadillas", "Hamburguesas"]
 
-array=[a,b,c]
-i=0
+array = [a,b,c]
+i = 0
+
 while i < array.length
 	array.each do |x|
 		print "#{x[i]} "

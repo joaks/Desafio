@@ -1,9 +1,8 @@
 require "pp"
 
-prng = Random.new
 arreglo = []
  10.times do
- 	arreglo.push(prng.rand(100))
+ 	arreglo.push(rand(100))
 
 end
 pp arreglo

@@ -11,9 +11,9 @@ b = [:azul, :rojo, :amarillo]
 c = ["Tacos", "Quesadillas", "Hamburguesas"]
 
 
-array=[a,b.reverse,c]
+array = [a,b.reverse,c]
 
-i=0
+i = 0
 while i < array.length
 	array.each do |x|
 		print "#{x[i]} "
