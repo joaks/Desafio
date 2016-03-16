@@ -320,3 +320,28 @@ end
 # array_string = string.split(" ").to_a
 # pp array_string.last
 
+movies.select do |k, v|
+  x = v[:realease_date].split(" ").to_a
+  if x.last.to_i < 2012 && x.last.to_i > 2006
+    puts "La película #{k} se estrenó entre los años 2006 y 2012"
+  end
+end
+
+movies.select do |k, v|
+  contador_good = 0
+  contador_bad = 0
+  v[:votes].each do |x|
+    if x == :good
+      contador_good += 1
+    elsif x == :bad
+      contador_bad += 1
+    end
+  end
+  if contador_good >= 7
+    puts "La película #{k} está catalogada como buena"
+  elsif contador_bad >= 7
+    puts "La película #{k} está catalogada como mala"
+  else
+    puts "La película #{k} está catalogada como regular"
+  end
+end
