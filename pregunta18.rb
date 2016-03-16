@@ -304,13 +304,19 @@ movies = {
 require_relative "movies.rb"
 require "pp"
 
-arreglo_genero_action = []
-arreglo_genero_documental = []
-arreglo_genero_musical = []
-arreglo_genero_drama = []
-arreglo_genero_thriller = []
-arreglo_genero_animated = []
-arreglo_genero_comedy = []
-arreglo_genero_adventure = []
-arreglo_genero_scyFy = []
-arreglo_genero_horror = []
+
+# Action, Documental, Musical, Drama, Thriller, Animated, Comedy, Adventure, ScyFy, Horror
+
+arreglo_generos = ["Action", "Documental", "Musical", "Drama", "Thriller", "Animated", "Comedy", "Adventure", "ScyFy", "Horror"]
+
+arreglo_generos.each do |x|
+  arreglo_nuevo = movies.select do |key, hash|
+    hash[:genre] == x
+  end
+  puts "Los títulos de las películas de género #{x} son #{arreglo_nuevo.keys} y en total son #{arreglo_nuevo.length}"
+end
+
+# string = "Hola como estas"
+# array_string = string.split(" ").to_a
+# pp array_string.last
+
